@@ -1,0 +1,10 @@
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/bin/Debug/netstandard2.0/MyXamarinApp.Core.deps.json
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/bin/Debug/netstandard2.0/MyXamarinApp.Core.dll
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/bin/Debug/netstandard2.0/MyXamarinApp.Core.pdb
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/obj/Debug/netstandard2.0/MyXamarinApp.Core.csproj.AssemblyReference.cache
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/obj/Debug/netstandard2.0/MyXamarinApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/obj/Debug/netstandard2.0/MyXamarinApp.Core.AssemblyInfoInputs.cache
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/obj/Debug/netstandard2.0/MyXamarinApp.Core.AssemblyInfo.cs
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/obj/Debug/netstandard2.0/MyXamarinApp.Core.csproj.CoreCompileInputs.cache
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/obj/Debug/netstandard2.0/MyXamarinApp.Core.dll
+/Users/user/MyXamarinApp/src/MyXamarinApp.Core/obj/Debug/netstandard2.0/MyXamarinApp.Core.pdb
