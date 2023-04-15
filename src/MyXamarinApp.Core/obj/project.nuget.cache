@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "rIWJcCZDotgztMwyzMwaKodqXOyFOq9x6Xuge16xy3/IW8xj7GlMpFVJmBbucMfuN9XuZSCr8lhywgIEZR+jhA==",
+  "dgSpecHash": "EfiqKp+d9YhxDGfX9ratIK0595blF7c77t4OpHSsGQnJhpPf00vYqXrF948Zqv96Qzvh6T39/6UH8PevpsbjMA==",
   "success": true,
-  "projectFilePath": "/Users/user/MyXamarinApp/src/MyXamarinApp.Core/MyXamarinApp.Core.csproj",
+  "projectFilePath": "C:\\Users\\Mehistaken\\MovieApp\\src\\MyXamarinApp.Core\\MyXamarinApp.Core.csproj",
   "expectedPackageFiles": [
-    "/Users/user/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
-    "/Users/user/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/Users/user/.nuget/packages/mvvmcross/8.0.2/mvvmcross.8.0.2.nupkg.sha512",
-    "/Users/user/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Mehistaken\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Mehistaken\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Mehistaken\\.nuget\\packages\\mvvmcross\\8.0.2\\mvvmcross.8.0.2.nupkg.sha512",
+    "C:\\Users\\Mehistaken\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

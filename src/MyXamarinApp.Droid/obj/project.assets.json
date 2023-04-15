@@ -2645,32 +2645,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/user/.nuget/packages/": {}
+    "C:\\Users\\Mehistaken\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/MyXamarinApp/src/MyXamarinApp.Droid/MyXamarinApp.Droid.csproj",
+      "projectUniqueName": "C:\\Users\\Mehistaken\\MovieApp\\src\\MyXamarinApp.Droid\\MyXamarinApp.Droid.csproj",
       "projectName": "MyXamarinApp.Droid",
-      "projectPath": "/Users/user/MyXamarinApp/src/MyXamarinApp.Droid/MyXamarinApp.Droid.csproj",
-      "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/MyXamarinApp/src/MyXamarinApp.Droid/obj/",
+      "projectPath": "C:\\Users\\Mehistaken\\MovieApp\\src\\MyXamarinApp.Droid\\MyXamarinApp.Droid.csproj",
+      "packagesPath": "C:\\Users\\Mehistaken\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mehistaken\\MovieApp\\src\\MyXamarinApp.Droid\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/user/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Mehistaken\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid11.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "/Users/user/MyXamarinApp/src/MyXamarinApp.Core/MyXamarinApp.Core.csproj": {
-              "projectPath": "/Users/user/MyXamarinApp/src/MyXamarinApp.Core/MyXamarinApp.Core.csproj"
+            "C:\\Users\\Mehistaken\\MovieApp\\src\\MyXamarinApp.Core\\MyXamarinApp.Core.csproj": {
+              "projectPath": "C:\\Users\\Mehistaken\\MovieApp\\src\\MyXamarinApp.Core\\MyXamarinApp.Core.csproj"
             }
           }
         }
