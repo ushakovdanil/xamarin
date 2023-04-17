@@ -7,14 +7,12 @@
     android:layout_height="316dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
             app:layout_constraintTop_toTopOf="parent"
             android:contentDescription="movie"/>
 
@@ -46,7 +44,6 @@
              android:maxLines="1"
              android:id="@+id/movie_info"
              android:layout_marginTop="7dp"
-             local:MvxBind="Text MovieName"
              android:gravity="center_horizontal"
              android:text="Володар перснів: Повернення короля"
              app:layout_constraintTop_toBottomOf="@+id/movieName"
