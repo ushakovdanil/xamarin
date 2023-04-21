@@ -13,10 +13,8 @@ namespace MyXamarinApp.Core.ViewModels.Main
         public MainContainerViewModel(IMvxNavigationService mvxNavigationService)
         {
             _mvxNavigationService = mvxNavigationService;
-            Navigate = new MvxAsyncCommand(async () => await _mvxNavigationService.Navigate<SecondActivityViewModel>());
+            Navigate = new MvxAsyncCommand(async () => await _mvxNavigationService.Navigate<MoviesFragmentViewModel>());
         }
-        public string Title => "Перша Актівіті";
-
         public MvxAsyncCommand Navigate { get; set; }
     }
 }

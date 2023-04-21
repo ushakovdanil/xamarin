@@ -70,6 +70,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Views\BaseActivity.cs" />
     <Compile Include="Views\BaseFragment.cs" />
+    <Compile Include="Views\Fragments\BaseFragment.cs" />
     <Compile Include="Views\MainContainerActivity.cs" />
     <Compile Include="Views\MoviesFragment.cs" />
     <Compile Include="Views\Splash\SplashActivity.cs" />
@@ -103,9 +104,7 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\fragment_main.axml" />
-    <AndroidResource Include="Resources\layout\layout_toolbar.axml" />
-    <AndroidResource Include="Resources\layout\activity_main_container.axml" />
+    <AndroidResource Include="Resources\layout\activity_main_container.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
@@ -156,9 +155,7 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

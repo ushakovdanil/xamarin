@@ -15,9 +15,11 @@ namespace MyXamarinApp.Core
 
         public string ImageUrl { get; set; }
 
-        public int IMDBRate { get; set; }
+        public double IMDBRate { get; set; }
 
         public string Genre { get; set; }
+
+        public string Time { get; set; }
 
         public string Title { get; set; }
 
