@@ -24,7 +24,7 @@ namespace MovieAppDiplom.Droid.Views.Main
         {
             base.OnViewCreated(view, savedInstanceState);
             var recycler = view.FindViewById<RecyclerView>(Resource.Id.movies_recycler);
-            recycler.SetLayoutManager(new GridLayoutManager(Application.Context, spanCount: 6));
+            recycler.SetLayoutManager(new GridLayoutManager(Application.Context, spanCount: 4));
             recycler.HasFixedSize = false;
         }
     }

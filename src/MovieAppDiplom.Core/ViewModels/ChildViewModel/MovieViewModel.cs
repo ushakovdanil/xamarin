@@ -19,10 +19,8 @@ namespace MyXamarinApp.Core.ViewModels.ChildViewModels
         }
 
         public Guid Id => CurrentMovie.Id;
-        public string Title => CurrentMovie.Title;
-
-        public string Description => CurrentMovie.Description;
-        public int MyProperty { get; set; }
+        public string Name => CurrentMovie.Name;
+        public string MovieInfo => CurrentMovie.Year + " · " + CurrentMovie.Genre + " · " + CurrentMovie.Time;
         public IMvxCommand AddToSavedClassCommand { get; set; }
     }
 }

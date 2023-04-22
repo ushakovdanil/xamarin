@@ -33,9 +33,11 @@
              android:gravity="center_horizontal"
              android:text="Володар перснів: Повернення короля"
              app:layout_constraintTop_toTopOf="@+id/bottom_info"
+             android:foregroundGravity="left"
              app:layout_constraintLeft_toLeftOf="@+id/bottom_info"
              app:layout_constraintRight_toRightOf="@+id/bottom_info"
-             local:MvxBind="Text MovieName"/>
+             android:textColor="@android:color/white"
+             local:MvxBind="Text Name"/>
 
         <TextView
              android:layout_width="wrap_content"
@@ -44,6 +46,8 @@
              android:id="@+id/movie_info"
              android:layout_marginTop="7dp"
              android:gravity="center_horizontal"
+             android:textColor="@android:color/white"
+             android:foregroundGravity="left"
              android:text="Володар перснів: Повернення короля"
              app:layout_constraintTop_toBottomOf="@+id/movieName"
              app:layout_constraintLeft_toLeftOf="@+id/bottom_info"
