@@ -21,6 +21,7 @@ namespace MyXamarinApp.Core.ViewModels.ChildViewModels
         public Guid Id => CurrentMovie.Id;
         public string Name => CurrentMovie.Name;
         public string MovieInfo => CurrentMovie.Year + " · " + CurrentMovie.Genre + " · " + CurrentMovie.Time;
+        public string ImageUrl => CurrentMovie.ImageUrl;
         public IMvxCommand AddToSavedClassCommand { get; set; }
     }
 }

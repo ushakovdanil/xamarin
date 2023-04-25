@@ -13,7 +13,7 @@ namespace MovieAppDiplom.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<MainContainerViewModel>();
+            RegisterAppStart<TableMoviesViewModel>();
         }
     }
 }

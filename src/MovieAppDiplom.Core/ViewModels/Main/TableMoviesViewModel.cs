@@ -24,6 +24,7 @@ namespace MovieAppDiplom.Core.ViewModels.Main
                         Name = "Titanic",
                         Year = 1994,
                         IMDBRate = 9.21,
+                        ImageUrl = "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
                         Genre ="Drama",
                         Time = "2г 2х"
                     }
@@ -34,6 +35,7 @@ namespace MovieAppDiplom.Core.ViewModels.Main
                         Name = "Titanic",
                         Year = 1994,
                         IMDBRate = 9.21,
+                        ImageUrl = "https://upload.wikimedia.org/wikipedia/ru/thumb/6/6f/%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC_%D0%A2%D0%BE%D0%B4%D0%B4%D0%B0_%D0%A4%D0%B8%D0%BB%D0%BB%D0%B8%D0%BF%D1%81%D0%B0%29.jpg/640px-%D0%94%D0%B6%D0%BE%D0%BA%D0%B5%D1%80_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC_%D0%A2%D0%BE%D0%B4%D0%B4%D0%B0_%D0%A4%D0%B8%D0%BB%D0%BB%D0%B8%D0%BF%D1%81%D0%B0%29.jpg",
                         Genre ="Drama",
                         Time = "2г 2х"
                     }
@@ -43,6 +45,7 @@ namespace MovieAppDiplom.Core.ViewModels.Main
                         Id = Guid.NewGuid(),
                         Name = "Titanic",
                         Year = 1994,
+                        ImageUrl = "https://upload.wikimedia.org/wikipedia/ru/d/de/%D0%A4%D0%BE%D1%80%D1%80%D0%B5%D1%81%D1%82_%D0%93%D0%B0%D0%BC%D0%BF.jpg",
                         IMDBRate = 9.21,
                         Genre ="Drama",
                         Time = "2г 2х"
@@ -53,6 +56,7 @@ namespace MovieAppDiplom.Core.ViewModels.Main
                         Id = Guid.NewGuid(),
                         Name = "Titanic",
                         Year = 1994,
+                        ImageUrl = "https://latifundist.com/media/gallery/780-s-w/00/00/743/14443413591236832106-52013.jpg",
                         IMDBRate = 9.21,
                         Genre ="Drama",
                         Time = "2г 2х"

@@ -9,11 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <FFImageLoading.Cross.MvxCachedImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@id/image"
+            app:srcCompat="@drawable/abc_vector_test"
+            android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="movie"/>
+            android:contentDescription="movie"
+            local:MvxBind="LoadingPlaceholderImagePath 'res:empty_placeholder.jpg';
+                            ErrorPlaceholderImagePath 'res:empty_placeholder.jpg';
+                            ImagePath ImageUrl" />
 
         <View
             android:layout_width="match_parent"
@@ -30,10 +36,10 @@
              android:maxLines="1"
              android:id="@+id/movieName"
              android:layout_marginTop="15dp"
-             android:gravity="center_horizontal"
+             android:gravity="left"
+             android:layout_marginLeft="15dp"
              android:text="Володар перснів: Повернення короля"
              app:layout_constraintTop_toTopOf="@+id/bottom_info"
-             android:foregroundGravity="left"
              app:layout_constraintLeft_toLeftOf="@+id/bottom_info"
              app:layout_constraintRight_toRightOf="@+id/bottom_info"
              android:textColor="@android:color/white"
@@ -45,9 +51,9 @@
              android:maxLines="1"
              android:id="@+id/movie_info"
              android:layout_marginTop="7dp"
-             android:gravity="center_horizontal"
+             android:gravity="left"
+             android:layout_marginLeft="15dp"
              android:textColor="@android:color/white"
-             android:foregroundGravity="left"
              android:text="Володар перснів: Повернення короля"
              app:layout_constraintTop_toBottomOf="@+id/movieName"
              app:layout_constraintLeft_toLeftOf="@+id/bottom_info"

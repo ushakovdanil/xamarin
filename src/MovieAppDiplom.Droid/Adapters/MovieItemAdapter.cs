@@ -33,22 +33,16 @@ namespace Frame.App.UIHelper.Implementations
         {
             base.OnBindViewHolder(holder, position);
 
-            var imageView = (holder as ItemWithImageViewHolder)?.ImageView;
+            var imageView =  holder.ItemView.FindViewById<ImageView>(Resource.Id.image);
+
             if (imageView != null)
             {
                 Glide.With(mFragment)
                     .Load(mViewModel.Movies[position]?.ImageUrl)
                     .Apply(_requestOptions)
+                    .Placeholder(Resource.Drawable.abc_vector_test)
                     .Into(imageView);
             }
-        }
-
-        public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
-        {
-            var itemBindingContext = new MvxAndroidBindingContext(parent.Context, this.BindingContext.LayoutInflaterHolder);
-            var view = this.InflateViewForHolder(parent, viewType, itemBindingContext);
-
-            return new ItemWithImageViewHolder(view, itemBindingContext);
         }
     }
 }

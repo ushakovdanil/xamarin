@@ -7,10 +7,14 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Telephony;
 using Android.Views;
 using Android.Widget;
 using AndroidX.RecyclerView.Widget;
+using Frame.App.UIHelper.Implementations;
 using MovieAppDiplom.Core.ViewModels.Main;
+using MvvmCross.DroidX.RecyclerView;
+using MvvmCross.Platforms.Android.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
 
 namespace MovieAppDiplom.Droid.Views.Main
@@ -23,9 +27,11 @@ namespace MovieAppDiplom.Droid.Views.Main
         public override void OnViewCreated(View view, Bundle savedInstanceState)
         {
             base.OnViewCreated(view, savedInstanceState);
-            var recycler = view.FindViewById<RecyclerView>(Resource.Id.movies_recycler);
-            recycler.SetLayoutManager(new GridLayoutManager(Application.Context, spanCount: 4));
+            var recycler = view.FindViewById<MvxRecyclerView>(Resource.Id.movies_recycler);
             recycler.HasFixedSize = false;
+            recycler.SetLayoutManager(new GridLayoutManager(Application.Context, spanCount: 4));
+            //recycler.Adapter = new MovieClassAdapter(this, ViewModel, (IMvxAndroidBindingContext)BindingContext);
         }
+
     }
 }
