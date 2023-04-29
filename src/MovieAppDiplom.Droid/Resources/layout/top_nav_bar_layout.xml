@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="127dp">
+    <View
+        android:layout_width="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="match_parent"
+        android:id="@+id/left_icon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movies_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/left_icon"
+        android:layout_gravity="center"
+        android:text="Фільми"
+        local:MvxBind="GetMoviesCommand"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/cartoons_title"
+        app:layout_constraintLeft_toRightOf="@+id/movies_title"
+        android:layout_marginLeft="60dp"
+        android:text="Мультфільми"
+        local:MvxBind="GetCartoonsCommand"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/cartoons_title"
+        android:layout_gravity="center"
+        android:layout_marginLeft="60dp"
+        android:text="Серіали"
+        local:MvxBind="GetSeriesCommand"/>
+
+<!--    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/profile_image"
+        app:layout_constraintRight_toLeftOf="@+id/profile_image"
+        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/profile_image"
+        app:layout_constraintRight_toLeftOf="@+id/settings_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        local:MvxBind="ProfileCommand"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"        
+        local:MvxBind="SettingsCommand"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

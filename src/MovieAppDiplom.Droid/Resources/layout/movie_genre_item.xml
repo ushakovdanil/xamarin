@@ -9,9 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:translationZ="3dp"
-        android:elevation="3dp"        
         android:background="@drawable/movie_genre_background"
-        android:src="@drawable/warner_bros1"/>
+        android:scaleType="centerInside"
+        local:MvxBind="LocalImagePath GenreImage"/>
 </androidx.cardview.widget.CardView>

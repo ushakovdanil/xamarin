@@ -6,6 +6,10 @@ using Android.Widget;
 using MvvmCross.Platforms.Android.Binding.Target;
 using Xamarin.Essentials;
 using Android.Content.Res;
+using AndroidX.AppCompat.Widget;
+using AndroidX.VectorDrawable.Graphics.Drawable;
+using Android.Content;
+using Android.App;
 
 namespace Frame.App.CustomBindings
 {
@@ -32,7 +36,15 @@ namespace Frame.App.CustomBindings
                 return;
 
             int id = imageView.Resources.GetIdentifier(localPath, "drawable", AppInfo.PackageName);
-            imageView.SetImageResource(id);
+            try
+            {
+                var drawable = VectorDrawableCompat.Create(Application.Context.Resources, id, null);
+                imageView.SetImageDrawable(drawable);
+            }
+            catch (Exception ex)
+            {
+                _ = ex;
+            }
         }
     }
 }
