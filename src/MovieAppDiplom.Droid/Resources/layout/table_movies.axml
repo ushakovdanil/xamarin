@@ -9,8 +9,19 @@
 
     <mvvmcross.droidx.recyclerview.MvxRecyclerView
         android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="78dp"
+        android:id="@+id/genres_recycler"
+        android:layout_marginHorizontal="100dp"
+        android:background="@android:color/transparent"
+        android:scrollbars="none"
+        local:MvxItemTemplate="@layout/movie_genre_item"
+        local:MvxBind="ItemsSource GenreMovies"/>
+    
+    <mvvmcross.droidx.recyclerview.MvxRecyclerView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="150dp"
         android:id="@+id/movies_recycler"
         android:layout_marginHorizontal="100dp"
         android:background="@android:color/transparent"

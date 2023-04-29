@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Telephony;
 using Android.Views;
 using Android.Widget;
+using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
 using Frame.App.UIHelper.Implementations;
 using MovieAppDiplom.Core.ViewModels.Main;
@@ -31,6 +32,12 @@ namespace MovieAppDiplom.Droid.Views.Main
             recycler.HasFixedSize = false;
             recycler.SetLayoutManager(new GridLayoutManager(Application.Context, spanCount: 4));
             //recycler.Adapter = new MovieClassAdapter(this, ViewModel, (IMvxAndroidBindingContext)BindingContext);
+
+            var genresRecycler = view.FindViewById<MvxRecyclerView>(Resource.Id.genres_recycler);
+            genresRecycler.SetLayoutManager(new LinearLayoutManager(Activity, LinearLayoutManager.Horizontal, false));
+            genresRecycler.HasFixedSize = false;
+
+
         }
 
     }

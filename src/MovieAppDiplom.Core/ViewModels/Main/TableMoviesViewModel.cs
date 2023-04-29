@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using MovieAppDiplom.Core.Models;
 using MovieAppDiplom.Core.ViewModels.Base;
+using MovieAppDiplom.Core.ViewModels.ChildViewModel;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -63,9 +64,32 @@ namespace MovieAppDiplom.Core.ViewModels.Main
                     }
                 }
             });
+
+            GenreMovies.AddRange(new List<GerneViewModel>()
+            {
+                new GerneViewModel()
+                {
+                    Genre = Genres.WarnerBros
+                },
+                new GerneViewModel()
+                {
+                    Genre = Genres.Disney
+                },
+                new GerneViewModel()
+                {
+                    Genre = Genres.Paramount
+                },
+                new GerneViewModel()
+                {
+                    Genre = Genres.Netflix
+                },
+            });
             RaiseAllPropertiesChanged();
         }
         public MvxObservableCollection<MovieViewModel> Movies { get; set; } = new MvxObservableCollection<MovieViewModel>();
+
+        public MvxObservableCollection<GerneViewModel> GenreMovies { get; set; } = new MvxObservableCollection<GerneViewModel>();
+
         public MvxAsyncCommand Navigate { get; set; }
     }
 }
