@@ -14,8 +14,11 @@ namespace MovieAppDiplom.Core.ViewModels.Main
         {
             _navigationService = mvxNavigationService;
             NavigateTableMovies = new MvxAsyncCommand(async async => await _navigationService.Navigate<TableMoviesViewModel>());
+            NavigateNavBar = new MvxAsyncCommand(async async => await _navigationService.Navigate<NavBarViewModel>());
         }
 
         public IMvxAsyncCommand NavigateTableMovies { get; set; }
+        public IMvxAsyncCommand NavigateNavBar { get; set; }
+
     }
 }

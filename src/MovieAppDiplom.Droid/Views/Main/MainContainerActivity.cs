@@ -23,7 +23,8 @@ namespace MovieAppDiplom.Droid.Views.Main
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            ViewModel.NavigateTableMovies.Execute(this);
+            ViewModel.NavigateTableMovies.Execute(null);
+            ViewModel.NavigateNavBar.Execute(null);
         }
     }
 }

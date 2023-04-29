@@ -9,7 +9,7 @@ using MvvmCross.Platforms.Android.Presenters.Attributes;
 namespace MovieAppDiplom.Droid.Views.Main
 {
     [MvxFragmentPresentation(typeof(MainContainerViewModel), Resource.Id.top_bar)]
-    public class NavBarFragment : BaseFragment<TableMoviesViewModel>
+    public class NavBarFragment : BaseFragment<NavBarViewModel>
     {
         protected override int FragmentLayoutId => Resource.Layout.top_nav_bar_layout;
 
@@ -18,6 +18,5 @@ namespace MovieAppDiplom.Droid.Views.Main
             base.OnViewCreated(view, savedInstanceState);
 
         }
-
     }
 }
