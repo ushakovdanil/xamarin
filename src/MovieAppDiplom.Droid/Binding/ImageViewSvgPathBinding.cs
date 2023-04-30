@@ -36,15 +36,8 @@ namespace Frame.App.CustomBindings
                 return;
 
             int id = imageView.Resources.GetIdentifier(localPath, "drawable", AppInfo.PackageName);
-            try
-            {
-                var drawable = VectorDrawableCompat.Create(Application.Context.Resources, id, null);
-                imageView.SetImageDrawable(drawable);
-            }
-            catch (Exception ex)
-            {
-                _ = ex;
-            }
+            imageView.SetImageResource(id);
+
         }
     }
 }
