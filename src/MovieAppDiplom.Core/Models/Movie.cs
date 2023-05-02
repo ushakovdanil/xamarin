@@ -1,13 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace MovieAppDiplom.Core.Models
 {
-    public class Movie
+    public class Movie 
     {
+        [JsonProperty("id")]
         public Guid Id { get; set; }
 
+        [JsonProperty("name")]
         public string Name { get; set; }
 
         public int Year { get; set; }
