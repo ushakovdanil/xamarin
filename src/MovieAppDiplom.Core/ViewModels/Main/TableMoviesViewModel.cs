@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using MovieAppDiplom.Core.Models;
 using MovieAppDiplom.Core.ViewModels.Base;
 using MovieAppDiplom.Core.ViewModels.ChildViewModel;
@@ -19,6 +20,17 @@ namespace MovieAppDiplom.Core.ViewModels.Main
             _navigationService = mvxNavigationService;
             Movies.AddRange(new List<MovieViewModel>()
             {
+                new MovieViewModel{ CurrentMovie = new Movie
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = "Titanic",
+                        Year = 1994,
+                        IMDBRate = 9.21,
+                        ImageUrl = "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+                        Genre ="Drama",
+                        Time = "2г 2х"
+                    }
+                },
                 new MovieViewModel{ CurrentMovie = new Movie
                     {
                         Id = Guid.NewGuid(),
@@ -57,7 +69,7 @@ namespace MovieAppDiplom.Core.ViewModels.Main
                         Id = Guid.NewGuid(),
                         Name = "Titanic",
                         Year = 1994,
-                        ImageUrl = "https://latifundist.com/media/gallery/780-s-w/00/00/743/14443413591236832106-52013.jpg",
+                        ImageUrl = "https://upload.wikimedia.org/wikipedia/ru/d/de/%D0%A4%D0%BE%D1%80%D1%80%D0%B5%D1%81%D1%82_%D0%93%D0%B0%D0%BC%D0%BF.jpg",
                         IMDBRate = 9.21,
                         Genre ="Drama",
                         Time = "2г 2х"
@@ -84,11 +96,20 @@ namespace MovieAppDiplom.Core.ViewModels.Main
                     Genre = Genres.Netflix
                 },
             });
+            SelectedMovieCommand = new MvxAsyncCommand<MovieViewModel>(MovieClickedAsync);
+
             RaiseAllPropertiesChanged();
         }
         public MvxObservableCollection<MovieViewModel> Movies { get; set; } = new MvxObservableCollection<MovieViewModel>();
 
         public MvxObservableCollection<GerneViewModel> GenreMovies { get; set; } = new MvxObservableCollection<GerneViewModel>();
+
+        public MvxAsyncCommand<MovieViewModel> SelectedMovieCommand { get; set; }
+
+        private async Task MovieClickedAsync(MovieViewModel movie)
+        {
+            await _navigationService.Navigate<MovieDetailsViewModel, Movie>(movie.CurrentMovie);
+        }
 
         public MvxAsyncCommand Navigate { get; set; }
     }

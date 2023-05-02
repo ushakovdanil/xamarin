@@ -1,21 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Telephony;
 using Android.Views;
-using Android.Widget;
-using AndroidX.Fragment.App;
+using Android.Flexbox;
 using AndroidX.RecyclerView.Widget;
-using Frame.App.UIHelper.Implementations;
 using MovieAppDiplom.Core.ViewModels.Main;
 using MvvmCross.DroidX.RecyclerView;
-using MvvmCross.Platforms.Android.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
 
 namespace MovieAppDiplom.Droid.Views.Main
@@ -30,15 +20,13 @@ namespace MovieAppDiplom.Droid.Views.Main
             base.OnViewCreated(view, savedInstanceState);
             var recycler = view.FindViewById<MvxRecyclerView>(Resource.Id.movies_recycler);
             recycler.HasFixedSize = false;
-            recycler.SetLayoutManager(new GridLayoutManager(Application.Context, spanCount: 4));
-            //recycler.Adapter = new MovieClassAdapter(this, ViewModel, (IMvxAndroidBindingContext)BindingContext);
+            var layoutManager = new FlexboxLayoutManager(context: Activity);
+            layoutManager.JustifyContent = JustifyContent.Center;
+            recycler.SetLayoutManager(layoutManager);
 
             var genresRecycler = view.FindViewById<MvxRecyclerView>(Resource.Id.genres_recycler);
             genresRecycler.SetLayoutManager(new LinearLayoutManager(Activity, LinearLayoutManager.Horizontal, false));
             genresRecycler.HasFixedSize = false;
-
-
         }
-
     }
 }

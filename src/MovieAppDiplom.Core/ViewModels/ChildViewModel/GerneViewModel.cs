@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using MovieAppDiplom.Core.Models;
 using MovieAppDiplom.Core.ViewModels.Base;
 
@@ -28,6 +25,4 @@ namespace MovieAppDiplom.Core.ViewModels.ChildViewModel
             Genres.Netflix => "netflix",
             _ => "paramount"
         };
-
-}
-}
+    }}

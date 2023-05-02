@@ -75,6 +75,7 @@
     <Compile Include="Views\BaseFragment.cs" />
     <Compile Include="Views\Main\MainContainerActivity.cs" />
     <Compile Include="Views\Main\MainFragment.cs" />
+    <Compile Include="Views\Main\MovieDetailsFragment.cs" />
     <Compile Include="Views\Main\NavBarFragment.cs" />
     <Compile Include="Views\Splash\SplashActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -98,6 +99,9 @@
     </PackageReference>
     <PackageReference Include="Serilog.Sinks.Xamarin">
       <Version>0.2.0.64</Version>
+    </PackageReference>
+    <PackageReference Include="XAB.FlexboxLayout">
+      <Version>3.0.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Glide">
       <Version>4.12.0.6</Version>
@@ -212,6 +216,20 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\disney.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\movie_details_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\profile_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

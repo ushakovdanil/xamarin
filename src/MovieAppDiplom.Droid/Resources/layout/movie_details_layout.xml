@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#12484F"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_height="match_parent"
+            android:id="@+id/left_mock_view"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/right_mock_view"/>
+
+        <FFImageLoading.Cross.MvxCachedImageView
+            android:layout_width="0dp"
+            android:layout_height="735dp"
+            android:id="@+id/image"
+            app:layout_constraintWidth_percent="0.4"
+            android:scaleType="centerCrop"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            local:MvxBind="LoadingPlaceholderImagePath 'res:empty_placeholder.jpg';
+                            ErrorPlaceholderImagePath 'res:empty_placeholder.jpg';
+                            ImagePath ImageUrl"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:id="@+id/title"
+            app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:textSize="48dp"
+            android:text="Джокер"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/category"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="24dp"
+            android:text="Опис"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/star"
+            app:layout_constraintTop_toBottomOf="@+id/category"
+            app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/star"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:id="@+id/rate"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="12dp"
+            android:text="IMDB 8.4, X 8.8"
+            app:layout_constraintTop_toTopOf="@+id/star"
+            app:layout_constraintBottom_toBottomOf="@+id/star"
+            app:layout_constraintLeft_toRightOf="@+id/star"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textColor="@android:color/white"
+            android:text="2019 Трагікомедія, Кримінал, Драма, Трилер"
+            android:id="@+id/year_and_genre"
+            app:layout_constraintTop_toBottomOf="@+id/rate"
+            app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            app:layout_constraintWidth_percent="0.55"
+            android:textColor="@android:color/white"
+            android:text="Сюжет ґрунтується на передісторії персонажа коміксів видавництва DC Comics, найвідомішого антагоніста Бетмена — Джокера. Події розгортаються у 1981 році у Готем-сіті. Комік Артур Флек (Хоакін Фенікс) розчарувався у своїй професії. Незатребуваність його таланту та відсутність любові від глядачів зіграли злий жарт. Артур втрачає розум та починає вбивати людей у такий спосіб, який наганяє жаху на мешканців усього міста."
+            android:id="@+id/decsription"
+            android:gravity="left"
+            app:layout_constraintTop_toBottomOf="@+id/year_and_genre"
+            app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
+            app:layout_constraintRight_toLeftOf="@+id/image"
+            android:layout_marginTop="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
