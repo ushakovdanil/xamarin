@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Firebase.Database;
 using Newtonsoft.Json;
 
 namespace MovieAppDiplom.Core.Models
@@ -27,6 +28,18 @@ namespace MovieAppDiplom.Core.Models
         public string Title { get; set; }
 
         public string Author { get; set; }
+
+        public Movie(FirebaseObject<Movie> fbMovie) {
+            Name = fbMovie.Object.Name;
+            Year = fbMovie.Object.Year;
+            Description = fbMovie.Object.Description;
+            ImageUrl = fbMovie.Object.ImageUrl;
+            IMDBRate = fbMovie.Object.IMDBRate;
+            Genre = fbMovie.Object.Genre;
+            Time = fbMovie.Object.Time;
+            Title = fbMovie.Object.Title;
+            Author = fbMovie.Object.Author;
+        }
 
         public Movie() { }
 

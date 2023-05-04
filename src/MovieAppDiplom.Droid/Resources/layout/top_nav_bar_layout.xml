@@ -19,8 +19,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/left_icon"
+        app:fontFamily="@font/medium"
         android:layout_gravity="center"
         android:text="Фільми"
+        android:textSize="24dp"
+        android:textColor="#10233E"
         local:MvxBind="Click GetMoviesCommand"/>
 
     <TextView
@@ -32,6 +35,8 @@
         android:id="@+id/cartoons_title"
         app:layout_constraintLeft_toRightOf="@+id/movies_title"
         android:layout_marginLeft="60dp"
+        android:textSize="24dp"
+        android:textColor="#10233E"
         android:text="Мультфільми"
         local:MvxBind="Click GetCartoonsCommand"/>
     
@@ -44,6 +49,8 @@
         android:layout_gravity="center"
         android:layout_marginLeft="60dp"
         android:text="Серіали"
+        android:textColor="#10233E"
+        android:textSize="24dp"
         local:MvxBind="Click GetSeriesCommand"/>
 
 <!--    <ImageButton
@@ -83,6 +90,5 @@
         app:layout_constraintBottom_toBottomOf="parent"    
         android:layout_marginRight="50dp"
         local:MvxBind="Click SettingsCommand"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

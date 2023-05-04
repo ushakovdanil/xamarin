@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MovieAppDiplom.Core.Models;
+using MovieAppDiplom.Core.Services;
 using MovieAppDiplom.Core.ViewModels.Base;
 using MovieAppDiplom.Core.ViewModels.ChildViewModel;
 using MvvmCross.Commands;
@@ -15,10 +17,13 @@ namespace MovieAppDiplom.Core.ViewModels.Main
     public class TableMoviesViewModel : BaseViewModel
     {
         private readonly IMvxNavigationService _navigationService;
-        public TableMoviesViewModel(IMvxNavigationService mvxNavigationService)
+        private readonly IFirebaseService _firebaseService;
+        public TableMoviesViewModel(IMvxNavigationService mvxNavigationService,
+            IFirebaseService firebaseService)
         {
             _navigationService = mvxNavigationService;
-            Movies.AddRange(new List<MovieViewModel>()
+            _firebaseService = firebaseService;
+           /* Movies.AddRange(new List<MovieViewModel>()
             {
                 new MovieViewModel{ CurrentMovie = new Movie
                     {
@@ -75,7 +80,7 @@ namespace MovieAppDiplom.Core.ViewModels.Main
                         Time = "2г 2х"
                     }
                 }
-            });
+            });*/
 
             GenreMovies.AddRange(new List<GerneViewModel>()
             {
@@ -99,6 +104,12 @@ namespace MovieAppDiplom.Core.ViewModels.Main
             SelectedMovieCommand = new MvxAsyncCommand<MovieViewModel>(MovieClickedAsync);
 
             RaiseAllPropertiesChanged();
+        }
+
+        public override async Task Initialize()
+        {
+            var list = await _firebaseService.GetMoviesAsync();
+            Movies.AddRange(list.Select(movie => new MovieViewModel(movie)));
         }
         public MvxObservableCollection<MovieViewModel> Movies { get; set; } = new MvxObservableCollection<MovieViewModel>();
 

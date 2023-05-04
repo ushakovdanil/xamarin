@@ -147,6 +147,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\font\bold.otf" />
+    <AndroidResource Include="Resources\font\medium.otf" />
+    <AndroidResource Include="Resources\font\regular.otf" />
+    <AndroidResource Include="Resources\font\semibold.otf" />
     <ProguardConfiguration Include="proguard.cfg" />
     <GoogleServicesJson Include="google-services.json" />
     <None Include="Properties\AndroidManifest.xml" />

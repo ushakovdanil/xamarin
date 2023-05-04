@@ -23,5 +23,10 @@ namespace MyXamarinApp.Core.ViewModels.ChildViewModels
         public string MovieInfo => CurrentMovie.Year + " · " + CurrentMovie.Genre + " · " + CurrentMovie.Time;
         public string ImageUrl => CurrentMovie.ImageUrl;
         public IMvxCommand SelectMovieCommand { get; set; }
+
+        public MovieViewModel(Movie movie)
+        {
+            CurrentMovie = movie;
+        }
     }
 }
