@@ -29,6 +29,9 @@ namespace MovieAppDiplom.Core.Models
 
         public string Author { get; set; }
 
+        public string VideoUrl { get; set; }
+
+
         public Movie(FirebaseObject<Movie> fbMovie) {
             Name = fbMovie.Object.Name;
             Year = fbMovie.Object.Year;
@@ -39,6 +42,7 @@ namespace MovieAppDiplom.Core.Models
             Time = fbMovie.Object.Time;
             Title = fbMovie.Object.Title;
             Author = fbMovie.Object.Author;
+            VideoUrl = fbMovie.Object.VideoUrl;
         }
 
         public Movie() { }
