@@ -12,7 +12,7 @@ namespace MovieAppDiplom.Core.ViewModels.Main
     public class MovieDetailsViewModel : BaseViewModel<Movie>
     {
         public MovieDetailsViewModel() {
-            AddMovieCommentCommand = new MvxCommand<string>(AddComment);
+            AddMovieCommentCommand = new MvxCommand(AddComment);
         }
 
         private Movie _currentMovie;
@@ -34,19 +34,26 @@ namespace MovieAppDiplom.Core.ViewModels.Main
             CurrentMovie = parameter;
         }
 
-        public MvxCommand<string> AddMovieCommentCommand { get; set; }
+        public MvxCommand AddMovieCommentCommand { get; set; }
 
-        private void AddComment(string comment)
+        private void AddComment()
         {
             var currentComment = new Comment()
-                {
+               {
                     UserName = string.IsNullOrEmpty(Settings.Username) ? "Guest" : Settings.Username,
                     CreatedTime = DateTime.Now,
-                    CommentValue = comment
-                };
+                    CommentValue = CommentValue
+            };
 
             MovieComments.Add(currentComment);
             RaisePropertyChanged(() => MovieComments);
+        }
+
+        private string _commentValue;
+        public string CommentValue
+        {
+            get => _commentValue;
+            set => SetProperty(ref _commentValue, value);
         }
     }
 }
