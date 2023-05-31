@@ -29,5 +29,9 @@ namespace MovieAppDiplom.Droid.Views.Main
             ViewModel.NavigateTableMovies.Execute(null);
             ViewModel.NavigateNavBar.Execute(null);
         }
+
+        public override void OnBackPressed() {
+            base.OnBackPressed();
+        }
     }
 }

@@ -76,6 +76,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Views\BaseActivity.cs" />
     <Compile Include="Views\BaseFragment.cs" />
+    <Compile Include="Views\Main\LoginFragment.cs" />
     <Compile Include="Views\Main\MainContainerActivity.cs" />
     <Compile Include="Views\Main\MainFragment.cs" />
     <Compile Include="Views\Main\MovieDetailsFragment.cs" />
@@ -254,7 +255,16 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\profile_icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\user_login_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\comment_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

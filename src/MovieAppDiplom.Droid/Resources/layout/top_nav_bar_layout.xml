@@ -67,6 +67,19 @@
         app:layout_constraintRight_toLeftOf="@+id/profile_image"
         app:layout_constraintBottom_toBottomOf="parent"/>-->
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/profile_image"
+        android:layout_gravity="center"
+        android:layout_marginRight="30dp"
+        android:textColor="#10233E"
+        android:textSize="24dp"
+        android:fontFamily="@font/bold"
+        android:text="Guest"/>
+
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -31,6 +31,7 @@ namespace MovieAppDiplom.Core.Models
 
         public string VideoUrl { get; set; }
 
+        public List<Comment> Comments { get; set; }
 
         public Movie(FirebaseObject<Movie> fbMovie) {
             Name = fbMovie.Object.Name;
@@ -43,6 +44,7 @@ namespace MovieAppDiplom.Core.Models
             Title = fbMovie.Object.Title;
             Author = fbMovie.Object.Author;
             VideoUrl = fbMovie.Object.VideoUrl;
+            Comments = fbMovie.Object.Comments;
         }
 
         public Movie() { }

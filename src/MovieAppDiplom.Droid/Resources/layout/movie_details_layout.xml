@@ -51,6 +51,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="20dp"
             android:textSize="48dp"
+            android:fontFamily="@font/semibold"
             android:text="Джокер"/>
 
         <com.google.android.youtube.player.YouTubeThumbnailView
@@ -70,6 +71,7 @@
             app:layout_constraintTop_toBottomOf="@+id/youtube_thumbnail"
             app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/semibold"
             android:textColor="@android:color/white"
             android:textSize="24dp"
             android:text="Опис"/>
@@ -88,6 +90,7 @@
             android:layout_height="wrap_content"
             android:textSize="24dp"
             android:id="@+id/rate"
+            android:fontFamily="@font/bold"
             android:textColor="@android:color/white"
             android:layout_marginLeft="12dp"
             android:text="IMDB 8.4, X 8.8"
@@ -103,6 +106,7 @@
             android:textColor="@android:color/white"
             android:text="2019 Трагікомедія, Кримінал, Драма, Трилер"
             android:id="@+id/year_and_genre"
+            android:fontFamily="@font/semibold"
             app:layout_constraintTop_toBottomOf="@+id/rate"
             app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
             android:layout_marginTop="24dp"/>
@@ -116,10 +120,76 @@
             android:text="Сюжет ґрунтується на передісторії персонажа коміксів видавництва DC Comics, найвідомішого антагоніста Бетмена — Джокера. Події розгортаються у 1981 році у Готем-сіті. Комік Артур Флек (Хоакін Фенікс) розчарувався у своїй професії. Незатребуваність його таланту та відсутність любові від глядачів зіграли злий жарт. Артур втрачає розум та починає вбивати людей у такий спосіб, який наганяє жаху на мешканців усього міста."
             android:id="@+id/decsription"
             android:gravity="left"
+            android:fontFamily="@font/regular"
             app:layout_constraintTop_toBottomOf="@+id/year_and_genre"
             app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
             app:layout_constraintRight_toLeftOf="@+id/image"
             android:layout_marginTop="24dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/comment_placeholder"
+            app:layout_constraintWidth_percent="0.94"
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            app:layout_constraintLeft_toRightOf="@id/left_mock_view"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="50dp"
+            android:background="#368F8B"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Відгуки"
+            android:id="@+id/comments"
+            app:layout_constraintTop_toTopOf="@+id/comment_placeholder"
+            app:layout_constraintLeft_toLeftOf="@+id/comment_placeholder"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="36dp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/bold"
+            app:layout_constraintLeft_toRightOf="@id/left_mock_view"/>
+
+        <androidx.cardview.widget.CardView
+             android:layout_width="82dp"
+             android:layout_height="82dp"
+             android:background="#E9E7E4"
+             app:cardCornerRadius="12dp"
+             android:id="@+id/commentInput"
+             app:layout_constraintTop_toBottomOf="@+id/comments"
+             app:layout_constraintLeft_toLeftOf="@+id/comment_placeholder"
+             android:layout_marginLeft="30dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Напишіть відгук"
+                android:textColorHint="@color/material_grey_600"
+                local:MvxBind="Text CommentValue"/>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:layout_width="305dp"
+            android:layout_height="82dp"
+            android:text="Залишити відгук"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="@+id/commentInput"
+            app:layout_constraintBottom_toBottomOf="@+id/commentInput"
+            app:layout_constraintLeft_toRightOf="@+id/commentInput"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/movie_genre_background"
+            local:MvxBind="Click AddMovieCommentCommand"/>
+
+        <mvvmcross.platforms.android.binding.views.MvxListView
+            android:layout_width="600dp"
+            app:layout_constraintTop_toBottomOf="@+id/commentInput"
+            android:layout_marginTop="14dp"
+            app:layout_constraintLeft_toLeftOf="@+id/comment_placeholder"
+            app:MvxItemTemplate="@layout/comment_item"
+            android:divider="@android:color/white"
+            android:dividerHeight="0dp"
+            android:layout_height="wrap_content"
+            local:MvxBind="ItemsSource MovieComments;"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@id/main_content"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="127dp"
+        android:clickable="true"
+        android:layout_marginRight="150dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/title"
+            android:text="Вхід до диплому"
+            android:textColor="#246A73"
+            android:fontFamily="@font/semibold"
+            android:textSize="24dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/subtitle"
+            android:text="Авторизація в особистому кабінеті."
+            android:textColor="#246A73"
+            android:fontFamily="@font/semibold"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/editText1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:hint="Вкажіть ваш email або телефон"
+            android:textColorHint="#708B8F"
+            android:fontFamily="@font/regular"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle"
+            android:layout_marginTop="40dp"
+            android:inputType="text"
+            local:MvxBind="Text UserName"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/editText2"
+            app:layout_constraintTop_toBottomOf="@+id/editText1"
+            android:hint="Вкажіть ваш пароль"
+            android:textColorHint="#708B8F"
+            android:fontFamily="@font/regular"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:inputType="textPassword"
+            local:MvxBind="Text UserPassword"/>
+
+        <Button
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_height="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="#246A73"
+            android:text="Увійти"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/editText2"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/medium"
+            local:MvxBind="Click LoginCommand"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/bottom_button"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/bottom_title"
+            android:text="Немає акаунту?"
+            android:textColor="#246A73"
+            android:fontFamily="@font/regular"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/bottom_title"
+            android:layout_marginBottom="20dp"
+            android:text="Зареєструватися"
+            android:id="@+id/bottom_button"
+            android:textColor="#A43C3C"
+            android:fontFamily="@font/regular"
+            android:textSize="14dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
