@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Frame.AppCore.Helpers;
 using MovieAppDiplom.Core.Models;
@@ -22,7 +23,10 @@ namespace MovieAppDiplom.Core.ViewModels.Main
             set
             {
                 _currentMovie = value;
-                MovieComments.AddRange(value.Comments);
+                if (value?.Comments != null)
+                {
+                    MovieComments.AddRange(value.Comments);
+                }
                 RaiseAllPropertiesChanged();
             }
         }
@@ -38,13 +42,18 @@ namespace MovieAppDiplom.Core.ViewModels.Main
 
         private void AddComment()
         {
+            if(string.IsNullOrEmpty(CommentValue))
+            {
+                return;
+            }
+
             var currentComment = new Comment()
                {
                     UserName = string.IsNullOrEmpty(Settings.Username) ? "Guest" : Settings.Username,
                     CreatedTime = DateTime.Now,
                     CommentValue = CommentValue
             };
-
+            CommentValue = string.Empty;
             MovieComments.Add(currentComment);
             RaisePropertyChanged(() => MovieComments);
         }
