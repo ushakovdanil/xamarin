@@ -21745,112 +21745,112 @@ namespace MovieAppDiplom.Droid
 			public const int cartoons_title = 2131296373;
 			
 			// aapt resource value: 0x7F090076
-			public const int category = 2131296374;
+			public const int center = 2131296374;
 			
 			// aapt resource value: 0x7F090077
-			public const int center = 2131296375;
+			public const int center_horizontal = 2131296375;
 			
 			// aapt resource value: 0x7F090078
-			public const int center_horizontal = 2131296376;
+			public const int center_vertical = 2131296376;
 			
 			// aapt resource value: 0x7F090079
-			public const int center_vertical = 2131296377;
+			public const int chain = 2131296377;
 			
 			// aapt resource value: 0x7F09007A
-			public const int chain = 2131296378;
+			public const int chains = 2131296378;
 			
 			// aapt resource value: 0x7F09007B
-			public const int chains = 2131296379;
+			public const int checkbox = 2131296379;
 			
 			// aapt resource value: 0x7F09007C
-			public const int checkbox = 2131296380;
+			public const int @checked = 2131296380;
 			
 			// aapt resource value: 0x7F09007D
-			public const int @checked = 2131296381;
+			public const int chip = 2131296381;
 			
 			// aapt resource value: 0x7F09007E
-			public const int chip = 2131296382;
+			public const int chip1 = 2131296382;
 			
 			// aapt resource value: 0x7F09007F
-			public const int chip1 = 2131296383;
+			public const int chip2 = 2131296383;
 			
 			// aapt resource value: 0x7F090080
-			public const int chip2 = 2131296384;
+			public const int chip3 = 2131296384;
 			
 			// aapt resource value: 0x7F090081
-			public const int chip3 = 2131296385;
+			public const int chip_group = 2131296385;
 			
 			// aapt resource value: 0x7F090082
-			public const int chip_group = 2131296386;
+			public const int chronometer = 2131296386;
 			
 			// aapt resource value: 0x7F090083
-			public const int chronometer = 2131296387;
+			public const int circle_center = 2131296387;
 			
 			// aapt resource value: 0x7F090084
-			public const int circle_center = 2131296388;
+			public const int clear_text = 2131296388;
 			
 			// aapt resource value: 0x7F090085
-			public const int clear_text = 2131296389;
+			public const int clip_horizontal = 2131296389;
 			
 			// aapt resource value: 0x7F090086
-			public const int clip_horizontal = 2131296390;
+			public const int clip_vertical = 2131296390;
 			
 			// aapt resource value: 0x7F090087
-			public const int clip_vertical = 2131296391;
+			public const int clockwise = 2131296391;
 			
 			// aapt resource value: 0x7F090088
-			public const int clockwise = 2131296392;
+			public const int closest = 2131296392;
 			
 			// aapt resource value: 0x7F090089
-			public const int closest = 2131296393;
+			public const int collapseActionView = 2131296393;
 			
 			// aapt resource value: 0x7F09008A
-			public const int collapseActionView = 2131296394;
+			public const int column = 2131296394;
 			
 			// aapt resource value: 0x7F09008B
-			public const int column = 2131296395;
+			public const int column_reverse = 2131296395;
 			
 			// aapt resource value: 0x7F09008C
-			public const int column_reverse = 2131296396;
+			public const int comment = 2131296396;
 			
 			// aapt resource value: 0x7F09008D
-			public const int comment = 2131296397;
-			
-			// aapt resource value: 0x7F09008E
-			public const int commentInput = 2131296398;
-			
-			// aapt resource value: 0x7F090090
-			public const int comments = 2131296400;
+			public const int commentInput = 2131296397;
 			
 			// aapt resource value: 0x7F09008F
-			public const int comment_placeholder = 2131296399;
+			public const int comments = 2131296399;
+			
+			// aapt resource value: 0x7F09008E
+			public const int comment_placeholder = 2131296398;
+			
+			// aapt resource value: 0x7F090090
+			public const int confirm_button = 2131296400;
 			
 			// aapt resource value: 0x7F090091
-			public const int confirm_button = 2131296401;
+			public const int constraint = 2131296401;
 			
 			// aapt resource value: 0x7F090092
-			public const int constraint = 2131296402;
+			public const int container = 2131296402;
 			
 			// aapt resource value: 0x7F090093
-			public const int container = 2131296403;
+			public const int content = 2131296403;
 			
 			// aapt resource value: 0x7F090094
-			public const int content = 2131296404;
+			public const int contentPanel = 2131296404;
 			
 			// aapt resource value: 0x7F090095
-			public const int contentPanel = 2131296405;
+			public const int contiguous = 2131296405;
 			
 			// aapt resource value: 0x7F090096
-			public const int contiguous = 2131296406;
+			public const int continuousVelocity = 2131296406;
 			
 			// aapt resource value: 0x7F090097
-			public const int continuousVelocity = 2131296407;
+			public const int coordinator = 2131296407;
 			
 			// aapt resource value: 0x7F090098
-			public const int coordinator = 2131296408;
+			public const int cos = 2131296408;
 			
 			// aapt resource value: 0x7F090099
-			public const int cos = 2131296409;
+			public const int countdown_timer = 2131296409;
 			
 			// aapt resource value: 0x7F09009A
 			public const int counterclockwise = 2131296410;

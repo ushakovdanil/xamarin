@@ -14,6 +14,8 @@ using MovieAppDiplom.Droid.Models;
 using AndroidX.Core.App;
 using static Java.Util.Jar.Attributes;
 using Newtonsoft.Json;
+using MovieAppDiplom.Core.Models;
+using System.Collections.Generic;
 
 namespace MovieAppDiplom.Droid.Views.Main
 {
@@ -35,6 +37,24 @@ namespace MovieAppDiplom.Droid.Views.Main
             genresRecycler.SetLayoutManager(new LinearLayoutManager(Activity, LinearLayoutManager.Horizontal, false));
             genresRecycler.HasFixedSize = false;
 
+            var movie = new Movie
+            {
+                Id = Guid.NewGuid(),
+                Name = "Світ Дикого Заходу",
+                Year = 2016,
+                ImageUrl = "https://eneyida.tv/uploads/posts/2022-12/1923-2022.jpg",
+                IMDBRate = 7.9,
+                Genre = "НФ",
+                Time = "3 сезони",
+                Description = "Кинг Шульц – охотник за головами, прикрывающийся своей прошлой профессией дантиста. Шульц убивает братьев работорговцев и освобождает Джанго, чтобы тот помог ему найти трех братьев Бритл, которые в прошлом были надсмотрщиками на плантации, где раньше работал Джанго. Найдя братьев и расправившись с ними, Шульц делает предложение освобожденному рабу стать его напарником в охоте на преступников. Джанго соглашается не раздумывая, но у него есть и свои личные мотивы: найти и освободить свою любимую женщину Брумхильду, тоже рабыню, с которой их давно разлучили.",
+                VideoUrl = "4McenUEna3E",
+                Comments = new List<Comment>() { new Comment { CreatedTime = DateTime.Now, UserName = "Ushakov Danil", CommentValue = "Дуже кроваво!"} }
+            };
+
+/*            var firebase = new FirebaseClient("https://mymovieproject-a7c36-default-rtdb.europe-west1.firebasedatabase.app/");
+            firebase
+            .Child("Movies")
+             .PostAsync(JsonConvert.SerializeObject(movie));*/
         }
     }
 }

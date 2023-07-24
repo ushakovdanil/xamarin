@@ -6,6 +6,7 @@ using Serilog.Extensions.Logging;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using Android.Widget;
 using Frame.App.CustomBindings;
+using Android.Views;
 
 namespace MovieAppDiplom.Droid
 {
@@ -19,6 +20,8 @@ namespace MovieAppDiplom.Droid
             base.FillTargetFactories(registry);
 
             registry.RegisterCustomBindingFactory<ImageView>("LocalImagePath", view => new ImageViewSvgPathBinding(view));
+            registry.RegisterCustomBindingFactory<View>("Visible", view => new VisibleBinding(view));
+
 
         }
         protected override ILoggerFactory CreateLogFactory()

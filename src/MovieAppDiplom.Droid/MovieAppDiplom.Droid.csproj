@@ -67,7 +67,9 @@
   <ItemGroup>
     <Compile Include="Adapters\ItemWithImageViewHolder.cs" />
     <Compile Include="Adapters\MovieItemAdapter.cs" />
+    <Compile Include="Binding\Class1.cs" />
     <Compile Include="Binding\ImageViewSvgPathBinding.cs" />
+    <Compile Include="LinkedPleaseIncluse.cs" />
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Models\MovieDto.cs" />

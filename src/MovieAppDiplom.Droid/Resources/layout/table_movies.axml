@@ -18,6 +18,18 @@
         local:MvxItemTemplate="@layout/movie_genre_item"
         local:MvxBind="ItemsSource GenreMovies"/>
     
+    <ProgressBar
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:id="@+id/countdown_timer"
+        android:indeterminateOnly="true"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateTint="@android:color/white"
+        android:translationZ="4dp"
+        local:MvxBind="Visible IsLoading"/>
+
     <mvvmcross.droidx.recyclerview.MvxRecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

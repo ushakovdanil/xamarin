@@ -31,6 +31,7 @@ namespace MovieAppDiplom.Core.Models
 
         public string VideoUrl { get; set; }
 
+        public string YearAndGenre => Year + " " + Genre;
         public List<Comment> Comments { get; set; }
 
         public Movie(FirebaseObject<Movie> fbMovie) {

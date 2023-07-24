@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Frame.AppCore.Helpers;
+using MovieAppDiplom.Core.Services;
 using MovieAppDiplom.Core.Services.Interfaces;
 using MovieAppDiplom.Core.ViewModels.Base;
 using MvvmCross.Commands;
@@ -13,14 +14,17 @@ namespace MovieAppDiplom.Core.ViewModels.Main
     public class NavBarViewModel : BaseViewModel, IUserChangeListener
     {
         private readonly IMvxNavigationService _navigationService;
-        public NavBarViewModel(IMvxNavigationService navigationService)
+        private readonly IFirebaseService _firebaseService;
+        public NavBarViewModel(IMvxNavigationService navigationService,
+            IFirebaseService firebaseService)
         {
             _navigationService = navigationService;
+            _firebaseService = firebaseService;
             GetMoviesCommand = new MvxAsyncCommand(async async => await NavigateSpecificMovies("movies"));
             GetCatroonsCommand = new MvxAsyncCommand(async async => await NavigateSpecificMovies("cartoons"));
             GetSeriesCommand = new MvxAsyncCommand(async async => await NavigateSpecificMovies("series"));
             ProfileCommand = new MvxAsyncCommand(async async => await _navigationService.Navigate<LoginViewModel>());
-
+            _firebaseService.AddUserChangedListener(this);
             UserName = Settings.Username ?? "Guest";
         }        
 

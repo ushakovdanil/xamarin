@@ -52,35 +52,27 @@
             android:layout_marginTop="20dp"
             android:textSize="48dp"
             android:fontFamily="@font/semibold"
-            android:text="Джокер"/>
+            android:text="Джокер"
+            local:MvxBind="Text CurrentMovie.Name"/>
 
         <com.google.android.youtube.player.YouTubeThumbnailView
             android:id="@+id/youtube_thumbnail"
             android:layout_width="400dp"
             app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
             app:layout_constraintTop_toBottomOf="@+id/title"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="40dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:visibility="visible"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/category"
-            app:layout_constraintTop_toBottomOf="@+id/youtube_thumbnail"
-            app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/semibold"
-            android:textColor="@android:color/white"
-            android:textSize="24dp"
-            android:text="Опис"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/star"
-            app:layout_constraintTop_toBottomOf="@+id/category"
+            app:layout_constraintTop_toBottomOf="@+id/youtube_thumbnail"
             app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
             android:layout_marginTop="24dp"
             android:src="@drawable/star"/>
@@ -109,7 +101,8 @@
             android:fontFamily="@font/semibold"
             app:layout_constraintTop_toBottomOf="@+id/rate"
             app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
-            android:layout_marginTop="24dp"/>
+            android:layout_marginTop="24dp"
+            local:MvxBind="Text CurrentMovie.YearAndGenre"/>
 
         <TextView
             android:layout_width="0px"
@@ -117,14 +110,14 @@
             android:textSize="24dp"
             app:layout_constraintWidth_percent="0.55"
             android:textColor="@android:color/white"
-            android:text="Сюжет ґрунтується на передісторії персонажа коміксів видавництва DC Comics, найвідомішого антагоніста Бетмена — Джокера. Події розгортаються у 1981 році у Готем-сіті. Комік Артур Флек (Хоакін Фенікс) розчарувався у своїй професії. Незатребуваність його таланту та відсутність любові від глядачів зіграли злий жарт. Артур втрачає розум та починає вбивати людей у такий спосіб, який наганяє жаху на мешканців усього міста."
             android:id="@+id/decsription"
             android:gravity="left"
             android:fontFamily="@font/regular"
             app:layout_constraintTop_toBottomOf="@+id/year_and_genre"
             app:layout_constraintLeft_toRightOf="@+id/left_mock_view"
             app:layout_constraintRight_toLeftOf="@+id/image"
-            android:layout_marginTop="24dp"/>
+            android:layout_marginTop="24dp"
+            local:MvxBind="Text CurrentMovie.Description"/>
 
         <View
             android:layout_width="0dp"
@@ -190,8 +183,6 @@
             android:layout_marginTop="30dp"
             app:layout_constraintLeft_toLeftOf="@+id/comment_placeholder"
             app:MvxItemTemplate="@layout/comment_item"
-            android:divider="@android:color/white"
-            android:dividerHeight="0dp"
             android:layout_marginLeft="40dp"
             android:layout_height="500dp"
             local:MvxBind="ItemsSource MovieComments;"/>

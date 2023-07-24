@@ -36,6 +36,7 @@
         app:layout_constraintLeft_toRightOf="@+id/movies_title"
         android:layout_marginLeft="60dp"
         android:textSize="24dp"
+        app:fontFamily="@font/medium"
         android:textColor="#10233E"
         android:text="Мультфільми"
         local:MvxBind="Click GetCartoonsCommand"/>
@@ -49,6 +50,7 @@
         android:layout_gravity="center"
         android:layout_marginLeft="60dp"
         android:text="Серіали"
+        app:fontFamily="@font/medium"
         android:textColor="#10233E"
         android:textSize="24dp"
         local:MvxBind="Click GetSeriesCommand"/>
@@ -78,7 +80,8 @@
         android:textColor="#10233E"
         android:textSize="24dp"
         android:fontFamily="@font/bold"
-        android:text="Guest"/>
+        android:text="Guest"
+        local:MvxBind="Text UserName"/>
 
     <ImageButton
         android:layout_width="wrap_content"
